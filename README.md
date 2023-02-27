@@ -1,2 +1,2 @@
-# portfolio
-Chubi's porfolio page
+# Portfolio
+Chubi's porfolio page; written in React.js
