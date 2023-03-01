@@ -1,21 +1,16 @@
 import React from 'react';
 import styled from 'styled-components'
-import NavigationItem, { NavigationStyles } from './NavigationItem'
+import NavigationItem from './NavigationItem'
 import Button from '../../Button'
 
 const Navigation = styled.div({
     display: 'flex',
     flexDirection: 'row',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
+    alignItems: 'center'
 })
 
-const DownloadResume = styled(Button)`
-    ${NavigationStyles}
-`
-
-
-const J = styled(DownloadResume)
-const options  = ['Experience', 'About', 'Contact']
+const options  = ['About', 'Experience', 'Contact']
 
 const Index = () => {
     return (
@@ -27,7 +22,9 @@ const Index = () => {
                     )
                 })
             }
-            <DownloadResume text={'Resume'}/>
+            <NavigationItem>
+                <Button text='Resume'/>
+            </NavigationItem>
         </Navigation>
     );
 };

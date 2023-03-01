@@ -1,22 +1,19 @@
 import React from 'react';
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 
-export const NavigationStyles = css({
+const NavigationItem = styled.div({
     marginLeft: '2vw'
 })
 
-const NavigationItem = styled.div`
- ${NavigationStyles}}
-`
-
 interface NavigationItemProps {
-    text : string
+    text?: string
+    children?: JSX.Element
 }
 
-const Index = ({ text }: NavigationItemProps) => {
+const Index = ({ text, children }: NavigationItemProps) => {
     return (
         <NavigationItem>
-            { text }
+            { children || text }
         </NavigationItem>
     );
 };
