@@ -6,7 +6,7 @@ import Reload from './Reload'
 const Header = styled.div({
  height: '10vh',
  color: 'white',
- background: 'orangered',
+//  background: 'orangered',
  display: 'flex',
  flexDirection: 'row',
  justifyContent: 'space-between',

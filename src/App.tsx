@@ -3,6 +3,7 @@ import Header from './Components/Header';
 import styled, { ThemeProvider } from 'styled-components';
 import Intro from './Components/Intro';
 import theme from './theme'
+import ContentWrapper from './Components/ContentWrapper';
 
 
 const App = styled.div(({ theme }) => ({
@@ -11,7 +12,7 @@ const App = styled.div(({ theme }) => ({
     height: '100vh',
     padding: '2vh 3vw',
     width: '100vw',
-    color: theme.colors.offWhite
+    color: theme.colors.normal
 }))
 
 function Index() {
@@ -19,7 +20,9 @@ function Index() {
     <ThemeProvider theme={theme}>
       <App className="App">
         <Header />
-        <Intro />
+        <ContentWrapper>
+          <Intro />
+        </ ContentWrapper>
       </App>
     </ThemeProvider>
   );

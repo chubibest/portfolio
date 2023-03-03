@@ -1,8 +1,12 @@
 import React from 'react';
 import styled from 'styled-components'
 
-const NavigationItem = styled.div({
-    marginLeft: '2vw'
+const NavigationItem = styled.a({
+    marginLeft: '2vw',
+    // transform: 'scaleX(1.2) scaleY(.8)'
+    // transform: 'scaleX(1.2) scaleY(.8)'
+    // transform: 'scaleX(1.1)'
+    fontStretch: 'condensed'
 })
 
 interface NavigationItemProps {

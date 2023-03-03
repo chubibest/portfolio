@@ -1,10 +1,12 @@
+import { relative } from 'path';
 import React from 'react';
 import styled from 'styled-components';
 import Button from '../Button';
 
 const Intro = styled.div({
-    
+
 })
+
 const Index = () => {
     return (
         <Intro>
@@ -18,7 +20,7 @@ const Index = () => {
                 Software Engineer
             </p>
             <p>
-                who specialises in leveraging something something something to build things that make people happy!
+                who specialises in leveraging cutting edge technology to build things that make people happy!
             </p>
             <Button text='Contact Me'/>
         </Intro>
