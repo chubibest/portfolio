@@ -1,30 +1,39 @@
 import React from 'react';
 import Header from './Components/Header';
-import styled, { ThemeProvider } from 'styled-components';
+import styled from 'styled-components';
 import Intro from './Components/Intro';
-import theme from './theme'
 import ContentWrapper from './Components/ContentWrapper';
 
 
 const App = styled.div(({ theme }) => ({
     'text-align': 'center',
-    'background-color': '#0a192f',
     height: '100vh',
     padding: '2vh 3vw',
     width: '100vw',
-    color: theme.colors.normal
+    color: theme.colors.normal,
+    '.fontLarge': {
+      fontSize: theme.fonts.sizes.large
+    },
+    '.fontSmall': {
+      fontSize: theme.fonts.sizes.small
+    },
+    '.fontMedium': {
+      fontSize: theme.fonts.sizes.medium
+    },
+    '.faded': {
+      color: theme.colors.faded
+    },
+    overflow: 'scroll'
 }))
 
 function Index() {
   return (
-    <ThemeProvider theme={theme}>
-      <App className="App">
-        <Header />
-        <ContentWrapper>
-          <Intro />
-        </ ContentWrapper>
-      </App>
-    </ThemeProvider>
+    <App className="App">
+      <Header />
+      <ContentWrapper>
+        <Intro />
+      </ ContentWrapper>
+    </App>
   );
 }
 

@@ -1,28 +1,34 @@
-import { relative } from 'path';
 import React from 'react';
 import styled from 'styled-components';
 import Button from '../Button';
 
 const Intro = styled.div({
-
+    display: 'flex',
+    textAlign: 'left',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    p: {
+        margin: 0
+    },
+    lineHeight: 1.5
 })
-
+// CHANGE FONT WEIGHT ON INTRODUCTIONGIT
 const Index = () => {
     return (
         <Intro>
-            <p>
-                Hello 👋, I am 
+            <p className='fontSmall'>
+              Hello 👋, I am 
             </p>
-            <p>
+            <p className='fontMedium'>
                 Chubi Best.
             </p>
-            <p>
+            <p className='fontMedium'>
                 Software Engineer
             </p>
-            <p>
+            <p className='fontSmall'>
                 who specialises in leveraging cutting edge technology to build things that make people happy!
             </p>
-            <Button text='Contact Me'/>
+            <Button className='fontSmall' text='Contact Me'/>
         </Intro>
     );
 };
