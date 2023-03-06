@@ -10,7 +10,7 @@ const Navigation = styled.div({
     alignItems: 'center'
 })
 
-const options  = ['About', 'Experience', 'Contact']
+const options  = ['About', 'Experience', 'Contributions', 'Contact']
 
 const Index = () => {
     return (

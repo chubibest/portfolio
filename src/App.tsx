@@ -3,14 +3,14 @@ import Header from './Components/Header';
 import styled from 'styled-components';
 import Intro from './Components/Intro';
 import ContentWrapper from './Components/ContentWrapper';
-
+import Experience from './Components/Experience'
 
 const App = styled.div(({ theme }) => ({
     'text-align': 'center',
     height: '100vh',
     padding: '2vh 3vw',
     width: '100vw',
-    color: theme.colors.normal,
+    color: theme.colors.faded,
     '.fontLarge': {
       fontSize: theme.fonts.sizes.large
     },
@@ -20,8 +20,11 @@ const App = styled.div(({ theme }) => ({
     '.fontMedium': {
       fontSize: theme.fonts.sizes.medium
     },
-    '.faded': {
-      color: theme.colors.faded
+    '.third': {
+      width: theme.layout.third
+    },
+    '.btn-margin-top': {
+      marginTop: theme.layout.marginBn
     },
     overflow: 'scroll'
 }))
@@ -31,7 +34,10 @@ function Index() {
     <App className="App">
       <Header />
       <ContentWrapper>
-        <Intro />
+        <>
+          <Intro />
+          <Experience />
+        </>
       </ ContentWrapper>
     </App>
   );

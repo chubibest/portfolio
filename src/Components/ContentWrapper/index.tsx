@@ -3,11 +3,14 @@ import styled from 'styled-components';
 
 const ContentWrapper = styled.div({
     textAlign: 'left',
-    position: 'relative',
+    // position: 'relative',
+    // top: '12vh',
+    flexDirection: 'column',
+    gap: '30vh',
     display: 'flex',
     width: '80vw',
-    top: '12vh',
-    margin: '0 auto'
+    margin: '12vh auto',
+    // marginTop: "12vh"
 })
 
 interface Props {
