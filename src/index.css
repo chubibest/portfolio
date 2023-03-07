@@ -9,6 +9,7 @@ body {
 
 body a{
   font-family: 'Roboto Mono', monospace;
+  cursor: pointer;
 }
 body, * {
   box-sizing: border-box;
@@ -17,5 +18,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
-

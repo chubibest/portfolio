@@ -4,6 +4,7 @@ import styled from 'styled-components';
 interface ButtonProps {
     text: string
     className?: string
+    onClick?: (e: React.MouseEvent<HTMLElement>) => void
 }
 const Button = styled.button(({theme}) => ({
     color: theme.button,
@@ -16,9 +17,9 @@ const Button = styled.button(({theme}) => ({
     borderRadius: '4px',
 }))
 
-const Index = ({ text, className }: ButtonProps) => {
+const Index = ({ text, className, onClick }: ButtonProps) => {
     return (
-        <Button className={className}>
+        <Button className={className} onClick={onClick}>
             {text}
         </Button>
     );

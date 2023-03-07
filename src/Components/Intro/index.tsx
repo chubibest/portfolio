@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Button from '../Button';
+import { mailTo } from '../Header/Navigation/actions';
 
 const Intro = styled.div(({ theme }) => ({
     display: 'flex',
@@ -15,10 +16,10 @@ const Intro = styled.div(({ theme }) => ({
         color: theme.colors.lively
     },
     '.intro': {
-        color: theme.colors.normal,
+        color: theme.colors.boldPink,
         fontWeight: 900,
         span: {
-            color: theme.colors.normal
+            color: theme.colors.lightPink
         }
     },
 }))
@@ -42,9 +43,10 @@ const Index = () => {
             <p className='fontSmall third'>
                 I specialize in leveraging cutting edge technology(s?) to build things that make people happy!
             </p>
-            <Button className='fontSmall btn-margin-top' text='Contact Me'/>
+            <Button className='fontSmall btn-margin-top' text='Contact Me' onClick={mailTo}/>
         </Intro>
     );
 };
+// onClick?: (e: React.MouseEvent<HTMLElement>) => void
 
 export default Index;

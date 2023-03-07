@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components'
 import NavigationItem from './NavigationItem'
 import Button from '../../Button'
+import { mailTo, about } from './actions';
 
 const Navigation = styled.div({
     display: 'flex',
@@ -10,25 +11,28 @@ const Navigation = styled.div({
     alignItems: 'center'
 })
 
-const options  = ['About', 'Experience', 'Contributions', 'Contact']
+// const options  = ['About', 'Experience', 'Contributions', 'Contact']
+const options  = [{text: 'About', onClick: about}, {text: 'Contact', onClick: mailTo}]
 
 const Index = () => {
     return (
         <Navigation>
             {
-                options.map((text, index) => {
+                options.map(({text, onClick}, index) => {
                     return (
-                        <NavigationItem text={text} key={index} />
+                        <NavigationItem text={text} key={index} onClick={onClick}/>
                     )
                 })
             }
             <NavigationItem>
-                <Button text='Resume'/>
+                <a href={require('../../../resume.pdf')} download="Resume" target='_blank'>
+                    <Button text='Resume'/>
+                </a>
             </NavigationItem>
         </Navigation>
     );
 };
-
+// download="Resume"
 export default Index;
 
 

@@ -3,20 +3,18 @@ import styled from 'styled-components'
 
 const NavigationItem = styled.a({
     marginLeft: '2vw',
-    // transform: 'scaleX(1.2) scaleY(.8)'
-    // transform: 'scaleX(1.2) scaleY(.8)'
-    // transform: 'scaleX(1.1)'
     fontStretch: 'condensed'
 })
 
 interface NavigationItemProps {
     text?: string
     children?: JSX.Element
+    onClick?: (e: React.MouseEvent<HTMLElement>) => void
 }
 
-const Index = ({ text, children }: NavigationItemProps) => {
+const Index = ({ text, children, onClick }: NavigationItemProps) => {
     return (
-        <NavigationItem>
+        <NavigationItem onClick={onClick}>
             { children || text }
         </NavigationItem>
     );

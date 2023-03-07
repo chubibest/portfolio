@@ -9,7 +9,8 @@ import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle(({ theme }) => ({
   'body': {
-    'background-color': '#0a192f'
+    // 'background-color': '#0a192f'
+    'background-color': 'black'
   }
 }))
 

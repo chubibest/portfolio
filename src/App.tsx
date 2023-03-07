@@ -36,7 +36,7 @@ function Index() {
       <ContentWrapper>
         <>
           <Intro />
-          <Experience />
+          {/* <Experience /> */}
         </>
       </ ContentWrapper>
     </App>
