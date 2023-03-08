@@ -41,7 +41,7 @@ const Index = () => {
             </p>
 
             <p className='fontSmall third'>
-                I specialize in leveraging cutting edge technology(s?) to build things that make people happy!
+                I specialize in leveraging cutting edge technology to build things that make people happy!
             </p>
             <Button className='fontSmall btn-margin-top' text='Contact Me' onClick={mailTo}/>
         </Intro>

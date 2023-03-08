@@ -8,7 +8,7 @@ const Reload = styled.div({
 const Index = () => {
     return (
         <Reload>
-            RELOAD
+
         </Reload>
     );
 };
