@@ -25,7 +25,7 @@ const Index = () => {
                 })
             }
             <NavigationItem>
-                <a href={require('../../../resume.pdf')} download="Resume" target='_blank'>
+                <a href={require('../../../resume.pdf')} download="Resume" target='_blank' rel="noreferrer">
                     <Button text='Resume'/>
                 </a>
             </NavigationItem>

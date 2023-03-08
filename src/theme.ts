@@ -4,7 +4,7 @@ const lively = '#64ffda'
 const normal = '#F8F0E3'
 
 // BLACK PINK
-export default {
+const theme = {
     button: lively,
     colors: {
         normal,
@@ -28,3 +28,4 @@ export default {
     }
 }
 
+export default theme

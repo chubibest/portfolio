@@ -3,7 +3,7 @@ import Header from './Components/Header';
 import styled from 'styled-components';
 import Intro from './Components/Intro';
 import ContentWrapper from './Components/ContentWrapper';
-import Experience from './Components/Experience'
+// import Experience from './Components/Experience'
 
 const App = styled.div(({ theme }) => ({
     'text-align': 'center',
