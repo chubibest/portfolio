@@ -20,9 +20,6 @@ const App = styled.div(({ theme }) => ({
     '.fontMedium': {
       fontSize: theme.fonts.sizes.medium
     },
-    '.third': {
-      width: theme.layout.third
-    },
     '.btn-margin-top': {
       marginTop: theme.layout.marginBn
     },

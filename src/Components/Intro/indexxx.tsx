@@ -13,24 +13,15 @@ const Intro = styled.div(({ theme }) => ({
     },
     lineHeight: 1.5,
     '.greeting': {
-        color: theme.colors.lively,
-        marginBottom: '5vh'
+        color: theme.colors.lively
     },
     '.intro': {
         color: theme.colors.boldPink,
         fontWeight: 900,
-        'span': {
-            color: theme.colors.lightPink,
-        },
-        '.title': {
-            lineHeight: 1,
-        },
+        span: {
+            color: theme.colors.lightPink
+        }
     },
-    '.whatIdo': {
-        marginTop: '6vh',
-        width: theme.layout.third,
-        color: 'white'
-    }
 }))
 
 const Index = () => {
@@ -45,12 +36,11 @@ const Index = () => {
                 <span>
                     Chubi Best.
                 </span>
-                <p className='title'>
-                    Software Engineer
-                </p>
+                <br/>
+                Software Engineer
             </p>
 
-            <p className='fontSmall whatIdo'>
+            <p className='fontSmall third'>
                 I specialize in leveraging cutting edge technology to build things that make people happy!
             </p>
             <Button className='fontSmall btn-margin-top' text='Contact Me' onClick={mailTo}/>
