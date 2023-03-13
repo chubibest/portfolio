@@ -7,6 +7,7 @@ import { ThemeProvider } from 'styled-components';
 import theme from './theme'
 import { createGlobalStyle } from 'styled-components'
 
+
 const GlobalStyle = createGlobalStyle(({ theme }) => ({
   'body': {
     // 'background-color': '#0a192f'
@@ -17,13 +18,12 @@ const GlobalStyle = createGlobalStyle(({ theme }) => ({
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
-
 root.render(
   <ThemeProvider theme={theme}>
-    <React.StrictMode>
-      <GlobalStyle />
-      <App />
-    </React.StrictMode>
+      <React.StrictMode>
+        <GlobalStyle />
+        <App />
+      </React.StrictMode>
   </ThemeProvider>
 
 );

@@ -27,7 +27,7 @@ const Intro = styled.div(({ theme }) => ({
         },
     },
     '.whatIdo': {
-        marginTop: '6vh',
+        marginTop: '4vh',
         width: theme.layout.third,
         color: 'white'
     }
@@ -38,7 +38,6 @@ const Index = () => {
         <Intro>
             <p className='fontSmall greeting'>
               Hello, I am 
-              {/* Hello 👋, I am  */}
             </p>
 
             <p className='fontLarge intro'>
@@ -57,6 +56,5 @@ const Index = () => {
         </Intro>
     );
 };
-// onClick?: (e: React.MouseEvent<HTMLElement>) => void
 
 export default Index;

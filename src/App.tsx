@@ -3,6 +3,8 @@ import Header from './Components/Header';
 import styled from 'styled-components';
 import Intro from './Components/Intro';
 import ContentWrapper from './Components/ContentWrapper';
+import useWindowDimensions from './CustomHooks/windowSize'
+import { WindowSize } from './Context/windowSize';
 // import Experience from './Components/Experience'
 
 const App = styled.div(({ theme }) => ({
@@ -27,15 +29,19 @@ const App = styled.div(({ theme }) => ({
 }))
 
 function Index() {
+  const dimensions = useWindowDimensions()
+
   return (
     <App className="App">
-      <Header />
-      <ContentWrapper>
-        <>
-          <Intro />
-          {/* <Experience /> */}
-        </>
-      </ ContentWrapper>
+      <WindowSize.Provider value={dimensions}>
+          <Header />
+          <ContentWrapper>
+            <>
+              <Intro />
+              {/* <Experience /> */}
+            </>
+          </ ContentWrapper>
+      </WindowSize.Provider>
     </App>
   );
 }
