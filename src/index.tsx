@@ -3,12 +3,10 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { ThemeProvider } from 'styled-components';
-import theme from './theme'
 import { createGlobalStyle } from 'styled-components'
 
 
-const GlobalStyle = createGlobalStyle(({ theme }) => ({
+const GlobalStyle = createGlobalStyle(({
   'body': {
     // 'background-color': '#0a192f'
     'background-color': 'black'
@@ -19,12 +17,12 @@ const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
-  <ThemeProvider theme={theme}>
+  // <ThemeProvider theme={theme}>
       <React.StrictMode>
         <GlobalStyle />
         <App />
       </React.StrictMode>
-  </ThemeProvider>
+  // {/* </ThemeProvider> */}
 
 );
   // "homepage": "https://chubibest.github.io/portfolio",

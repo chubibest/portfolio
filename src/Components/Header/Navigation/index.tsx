@@ -10,7 +10,10 @@ const Navigation = styled.div({
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
-    alignItems: 'center'
+    alignItems: 'center',
+    '@media (max-width: 767px)': {
+        'flexDirection': 'column'
+      }
 })
 
 // const options  = ['About', 'Experience', 'Contributions', 'Contact']

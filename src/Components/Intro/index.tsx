@@ -14,7 +14,10 @@ const Intro = styled.div(({ theme }) => ({
     lineHeight: 1.5,
     '.greeting': {
         color: theme.colors.lively,
-        marginBottom: '5vh'
+        marginBottom: '5vh',
+        '@media (max-width: 767px)': {
+            marginBottom: '1vh',
+        }
     },
     '.intro': {
         color: theme.colors.boldPink,
@@ -29,7 +32,10 @@ const Intro = styled.div(({ theme }) => ({
     '.whatIdo': {
         marginTop: '4vh',
         width: theme.layout.third,
-        color: 'white'
+        color: 'white',
+        '@media (max-width: 767px)': {
+            width: '80vw',
+        }
     }
 }))
 

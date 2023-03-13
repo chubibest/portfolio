@@ -28,4 +28,16 @@ const theme = {
     }
 }
 
+export const mobileTheme = ({
+    ...theme,
+    fonts: {
+      ...theme.fonts,
+      sizes: {
+        small: '5vw',
+        medium: '6vw',
+        large: '10vw'
+      }
+    }
+})
+
 export default theme

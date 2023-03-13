@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import Header from './Components/Header';
-import styled from 'styled-components';
+import styled, { ThemeProvider } from 'styled-components';
 import Intro from './Components/Intro';
 import ContentWrapper from './Components/ContentWrapper';
 import useWindowDimensions from './CustomHooks/windowSize'
 import { WindowSize } from './Context/windowSize';
+import theme, { mobileTheme } from './theme'
 // import Experience from './Components/Experience'
 
 const App = styled.div(({ theme }) => ({
@@ -29,20 +30,22 @@ const App = styled.div(({ theme }) => ({
 }))
 
 function Index() {
-  const dimensions = useWindowDimensions()
+  const isMobile = useWindowDimensions()
 
   return (
-    <App className="App">
-      <WindowSize.Provider value={dimensions}>
-          <Header />
-          <ContentWrapper>
-            <>
-              <Intro />
-              {/* <Experience /> */}
-            </>
-          </ ContentWrapper>
+    <WindowSize.Provider value={isMobile}>
+        <ThemeProvider theme={isMobile ? mobileTheme : theme} >
+          <App className="App">
+                <Header />
+                <ContentWrapper>
+                  <>
+                    <Intro />
+                    {/* <Experience /> */}
+                  </>
+                </ ContentWrapper>
+          </App>
+        </ThemeProvider>
       </WindowSize.Provider>
-    </App>
   );
 }
 
