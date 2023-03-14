@@ -1,4 +1,3 @@
-import React, { useCallback } from 'react';
 import Header from './Components/Header';
 import styled, { ThemeProvider } from 'styled-components';
 import Intro from './Components/Intro';
@@ -6,7 +5,6 @@ import ContentWrapper from './Components/ContentWrapper';
 import useWindowDimensions from './CustomHooks/windowSize'
 import { WindowSize } from './Context/windowSize';
 import theme, { mobileTheme } from './theme'
-// import Experience from './Components/Experience'
 
 const App = styled.div(({ theme }) => ({
     'text-align': 'center',
