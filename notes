@@ -2,10 +2,11 @@ Try commenting in google fonts for 'a' element
 increase 'a' horizontally
 
 
-Before V1
+V1
 Pin navigation on Scroll up and remove on scroll down
 Add highlight styles to button
 Fix Resume button on collapse
 Title and Thumbnail
 favicon
 space between name and Title and change the color of text around it to white
+prevent scrolling when modal is up

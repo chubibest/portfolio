@@ -11,7 +11,7 @@ const Index = () => {
 
     return (
         <>
-            {displayModal ? <Modal display={displayModal} setDisplay={setDisplayModal}  children={<NavigationContent />} />: null}
+            {displayModal ? <Modal> <NavigationContent />  </Modal>: null}
             {isMobile ? <Hamburger displayModal={displayModal} setDisplayModal={setDisplayModal}/> : <NavigationContent />}
         </>
     );
