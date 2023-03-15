@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { WindowSize } from '../../../Context/windowSize';
-import Hamburger from './MobileHamburger'
+import Hamburger from './MobileActions'
 import NavigationContent from './NavigationContent'
 import Modal from '../../Modal'
 
@@ -11,10 +11,8 @@ const Index = () => {
 
     return (
         <>
-            <Modal display={displayModal} setDisplay={setDisplayModal} >
-                <NavigationContent />
-            </Modal>
-            {isMobile ? <Hamburger optionsState={displayModal} flipOptionState={setDisplayModal}/> : <NavigationContent />}
+            {displayModal ? <Modal display={displayModal} setDisplay={setDisplayModal}  children={<NavigationContent />} />: null}
+            {isMobile ? <Hamburger displayModal={displayModal} setDisplayModal={setDisplayModal}/> : <NavigationContent />}
         </>
     );
 };

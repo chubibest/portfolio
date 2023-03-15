@@ -10,9 +10,20 @@ const NavigationContent = styled.div({
     justifyContent: 'space-between',
     alignItems: 'center',
     '@media (max-width: 767px)': {
-        'flexDirection': 'column'
+        'flexDirection': 'column',
+        'paddingTop': '18vh',
+        'justifyContent': 'flex-start',
+        'position': 'relative',
+        'right': 0,
+        // background: '#011b01',
+        background: '#0e0e0e',
+        'margin-left': 'auto',
+        'lineHeight': '3',
+        'paddingRight': '1vw'
+        // 'flexDirection': 'column',
+        // 'align-self': 'flex-end'
     },
-    'zIndex': 10
+    // 'zIndex': 10
 })
 
 // const options  = ['About', 'Experience', 'Contributions', 'Contact']
