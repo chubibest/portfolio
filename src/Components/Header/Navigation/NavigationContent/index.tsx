@@ -23,7 +23,6 @@ const NavigationContent = styled.div({
         // 'flexDirection': 'column',
         // 'align-self': 'flex-end'
     },
-    // 'zIndex': 10
 })
 
 // const options  = ['About', 'Experience', 'Contributions', 'Contact']

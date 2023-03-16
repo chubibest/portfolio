@@ -1,3 +1,4 @@
+import { Dispatch, SetStateAction } from 'react';
 import styled from 'styled-components';
 
 const Modal = styled.div({
@@ -9,12 +10,18 @@ const Modal = styled.div({
     position: 'fixed',
     top: 0,
     left: 0,
-    overflow: 'hidden'
+    overflow: 'hidden',
+    'z-index': 2
 })
 
-const Index = (props: React.PropsWithChildren) => {
+interface Props extends React.PropsWithChildren {
+    setDisplayModal:  React.Dispatch<React.SetStateAction<boolean>>
+    setRenderHam: React.Dispatch<React.SetStateAction<boolean>>
+}
+
+const Index = ({setRenderHam, children, setDisplayModal }: Props) => {
     return (
-        <Modal > {props.children} </Modal>
+        <Modal onClick={() => { setRenderHam(false); setDisplayModal(false);}}> {children} </Modal>
     );
 };
 

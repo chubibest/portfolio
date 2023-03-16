@@ -6,16 +6,22 @@ import Modal from '../../Modal'
 
 const Index = () => {
     const isMobile = useContext(WindowSize)
-    const [displayModal, setDisplayModal] = useState(false) 
+    const [displayModal, setDisplayModal] = useState(false)
+    const [renderHam, setRenderHam] = useState(true)
 
     useEffect(() => {
         setDisplayModal(false)
+        setRenderHam(true)
+
     }, [isMobile])
 
+    useEffect(() => {
+        setRenderHam(true)
+    }, [displayModal])
     return (
         <>
-            {isMobile && displayModal ? <Modal> <NavigationContent />  </Modal>: null}
-            {isMobile ? <Hamburger displayModal={displayModal} setDisplayModal={setDisplayModal}/> : <NavigationContent />}
+            {isMobile && displayModal ? <Modal setDisplayModal={setDisplayModal} setRenderHam={setRenderHam } > <NavigationContent />  </Modal>: null}
+            {isMobile && renderHam ? <Hamburger displayModal={displayModal} setDisplayModal={setDisplayModal}/> : <NavigationContent />}
         </>
     );
 };
