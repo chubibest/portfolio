@@ -6,11 +6,10 @@ const Modal = styled.div({
     display: 'flex',
     background: 'rgb(0, 0, 0, 0.6)',
     'backdrop-filter': 'blur(5px)',
-    position: 'absolute',
+    position: 'fixed',
     top: 0,
     left: 0,
     overflow: 'hidden'
-    // 'justifyContent': 'flex-end',
 })
 
 const Index = (props: React.PropsWithChildren) => {
