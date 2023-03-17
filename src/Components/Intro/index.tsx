@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Button from '../Button';
 import { mailTo } from '../Header/Navigation/actions';
+import Title from './title'
 
 const Intro = styled.div(({ theme }) => ({
     display: 'flex',
@@ -21,14 +22,8 @@ const Intro = styled.div(({ theme }) => ({
         }
     },
     '.intro': {
-        color: theme.colors.boldPink,
         fontWeight: 900,
-        'span': {
-            color: theme.colors.lightPink,
-        },
-        '.title': {
-            lineHeight: 1,
-        },
+        color: theme.colors.lightPink,
     },
     '.whatIdo': {
         marginTop: '4vh',
@@ -42,6 +37,7 @@ const Intro = styled.div(({ theme }) => ({
 }))
 
 const Index = () => {
+
     return (
         <Intro>
             <p className='fontSmall greeting'>
@@ -52,9 +48,7 @@ const Index = () => {
                 <span>
                     Chubi Best.
                 </span>
-                <p className='title'>
-                    Software Engineer
-                </p>
+                <Title/>
             </p>
 
             <p className='fontSmall whatIdo'>
