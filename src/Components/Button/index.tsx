@@ -15,6 +15,11 @@ const Button = styled.button(({theme}) => ({
     width: 'fit-content',
     padding: '1rem 2rem',
     borderRadius: '4px',
+    
+    '@media (max-width: 767px)': {
+
+        fontSize: theme.fonts.medium
+    }
 }))
 
 const Index = ({ text, className, onClick }: ButtonProps) => {

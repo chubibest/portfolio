@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const Hamburger = styled.div({
     cursor: 'pointer',
     width: '15vw',
-    zIndex: 4
+    zIndex: 4,
 })
 
 interface Props {

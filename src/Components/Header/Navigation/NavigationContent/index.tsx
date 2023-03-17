@@ -15,13 +15,11 @@ const NavigationContent = styled.div({
         'justifyContent': 'flex-start',
         'position': 'relative',
         'right': 0,
-        // background: '#011b01',
         background: '#0e0e0e',
         'margin-left': 'auto',
         'lineHeight': '3',
-        'paddingRight': '1vw'
-        // 'flexDirection': 'column',
-        // 'align-self': 'flex-end'
+        'paddingRight': '1vw',
+        'zIndex': 4
     },
 })
 
@@ -30,7 +28,7 @@ const options  = [{text: 'About', onClick: about}, {text: 'Contact', onClick: ma
 
 const Index = () => {
     return (
-        <NavigationContent>
+        <NavigationContent onClick={(e) => {e.stopPropagation()}}>
         {
             options.map(({text, onClick}, index) => {
                 return (

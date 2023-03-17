@@ -6,11 +6,12 @@ const Modal = styled.div({
     display: 'flex',
     background: 'rgb(0, 0, 0, 0.6)',
     'backdrop-filter': 'blur(5px)',
-    position: 'fixed',
+    position: 'absolute',
+    // position: 'fixed',
     top: 0,
     left: 0,
-    overflow: 'hidden',
-    'z-index': 2
+    'overflow': 'clip',
+    'zIndex': 3
 })
 
 interface Props extends React.PropsWithChildren {
@@ -20,7 +21,12 @@ interface Props extends React.PropsWithChildren {
 
 const Index = ({setRenderHam, children, setDisplayModal }: Props) => {
     return (
-        <Modal onClick={() => { setRenderHam(false); setDisplayModal(false);}}> {children} </Modal>
+        <Modal
+            onClick={(e) => { setDisplayModal(false); setRenderHam(false);}}
+            >
+            
+        {children}
+        </Modal>
     );
 };
 

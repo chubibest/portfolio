@@ -24,7 +24,7 @@ const App = styled.div(({ theme }) => ({
     '.btn-margin-top': {
       marginTop: theme.layout.marginBn
     },
-    overflow: 'scroll'
+    overflow: 'scroll',
 }))
 
 function Index() {

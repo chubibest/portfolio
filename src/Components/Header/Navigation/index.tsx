@@ -17,6 +17,11 @@ const Index = () => {
 
     useEffect(() => {
         setRenderHam(true)
+        if (displayModal){
+            document.body.style.overflow = 'hidden'
+        } else {
+            document.body.style.overflow = 'unset'
+        }
     }, [displayModal])
     return (
         <>
