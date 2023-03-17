@@ -15,6 +15,7 @@ const Intro = styled.div(({ theme }) => ({
     '.greeting': {
         color: theme.colors.lively,
         marginBottom: '5vh',
+        fontWeight: 'bold',
         '@media (max-width: 767px)': {
             marginBottom: '1vh',
         }
@@ -33,6 +34,7 @@ const Intro = styled.div(({ theme }) => ({
         marginTop: '4vh',
         width: theme.layout.third,
         color: 'white',
+        fontWeight: 'bold',
         '@media (max-width: 767px)': {
             width: '80vw',
         }

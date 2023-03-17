@@ -4,7 +4,7 @@ import { mailTo, about } from '../actions';
 import NavigationItem from '../NavigationItem'
 import Button from '../../../Button'
 
-const NavigationContent = styled.div({
+const NavigationContent = styled.div(({theme}) => ({
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -19,9 +19,15 @@ const NavigationContent = styled.div({
         'margin-left': 'auto',
         'lineHeight': '3',
         'paddingRight': '1vw',
-        'zIndex': 4
+        'zIndex': 4,
+        fontSize: '18px',
+        'a button': {
+            marginTop: '1vh',
+            fontSize: '20px',
+
+        }
     },
-})
+}))
 
 // const options  = ['About', 'Experience', 'Contributions', 'Contact']
 const options  = [{text: 'About', onClick: about}, {text: 'Contact', onClick: mailTo}]
