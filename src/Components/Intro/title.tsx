@@ -15,7 +15,7 @@ function Index() {
   React.useEffect(() => {
     const typed = new Typed(el.current, {
       strings: ['Backend', 'DevOps', 'Full Stack', 'Software Engineer'],
-      typeSpeed: 50,
+      typeSpeed: 100,
     });
 
     return () => {
