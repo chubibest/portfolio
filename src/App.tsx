@@ -5,11 +5,13 @@ import ContentWrapper from './Components/ContentWrapper';
 import useWindowDimensions from './CustomHooks/windowSize'
 import { WindowSize } from './Context/windowSize';
 import theme, { mobileTheme } from './theme'
+import Footer from './Components/Footer/Footer';
 
 const App = styled.div(({ theme }) => ({
     'text-align': 'center',
     height: '100vh',
-    padding: '2vh 3vw',
+    minHeight: '100vh',
+    padding: `2vh ${theme.layout.pageMargin}`,
     width: '100vw',
     color: theme.colors.faded,
     '.fontLarge': {
@@ -41,6 +43,7 @@ function Index() {
                     {/* <Experience /> */}
                   </>
                 </ ContentWrapper>
+                <Footer />
           </App>
         </ThemeProvider>
       </WindowSize.Provider>
