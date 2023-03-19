@@ -11,6 +11,7 @@ const App = styled.div(({ theme }) => ({
     'text-align': 'center',
     height: '100vh',
     minHeight: '100vh',
+    position: 'relative',
     padding: `2vh ${theme.layout.pageMargin}`,
     width: '100vw',
     color: theme.colors.faded,
