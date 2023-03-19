@@ -24,7 +24,8 @@ const theme = {
     },
     layout: {
         third: '33vw',
-        marginBn: '8vh'
+        marginBn: '8vh',
+        pageMargin: '3vw'
     }
 }
 
