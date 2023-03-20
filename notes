@@ -1,11 +1,12 @@
 Try commenting in google fonts for 'a' element
 increase 'a' horizontally
-Pin navigation on Scroll up and remove on scroll down
 
 
 V1
+Pin navigation on Scroll up and remove on scroll down
 Add highlight styles to button
-Fix Resume button on collapse
-Title and Thumbnail
+Thumbnail
 favicon
 Animate modal entry
+Make about reload page
+Nav fonts are not scaling with the page

@@ -9,7 +9,7 @@ const NavigationContent = styled.div(({theme}) => ({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    '@media (max-width: 767px)': {
+    '@media (orientation: portrait)': {
         'flexDirection': 'column',
         'paddingTop': '18vh',
         'justifyContent': 'flex-start',

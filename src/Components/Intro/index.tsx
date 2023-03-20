@@ -17,7 +17,7 @@ const Intro = styled.div(({ theme }) => ({
         color: theme.colors.lively,
         marginBottom: '5vh',
         fontWeight: 900,
-        '@media (max-width: 767px)': {
+        '@media (orientation: portrait)': {
             marginBottom: '1vh',
         }
     },
@@ -30,7 +30,7 @@ const Intro = styled.div(({ theme }) => ({
         width: theme.layout.third,
         color: 'white',
         fontWeight: 900,
-        '@media (max-width: 767px)': {
+        '@media (orientation: portrait)': {
             width: '80vw',
             fontWeight: 500
         }

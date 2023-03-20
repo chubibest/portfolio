@@ -23,7 +23,7 @@ const Footer = styled.footer(({theme}) => ({
             color: theme.colors.lively
         }
     },
-    '@media (max-width: 767px)': {
+    '@media (orientation: portrait)': {
         fontSize: '3vw',
         right: '50%',
         transform: 'translateX(50%)'

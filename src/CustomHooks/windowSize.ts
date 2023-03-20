@@ -2,16 +2,16 @@ import { useState, useLayoutEffect } from 'react';
 
 
 export default function useWindowDimensions() {
-  const [windowDimensions, setWindowDimensions] = useState(window.innerWidth);
+  const [windowDimensions, setWindowDimensions] = useState({width: window.innerWidth, height: window.innerHeight});
 
   useLayoutEffect(() => {
     function handleResize() {
-      setWindowDimensions(window.innerWidth);
+      setWindowDimensions({width: window.innerWidth, height: window.innerHeight});
     }
 
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  return windowDimensions < 768;
+  return windowDimensions.width < 768 && windowDimensions.width < windowDimensions.height;
 }
