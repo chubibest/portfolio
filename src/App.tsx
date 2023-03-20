@@ -12,6 +12,8 @@ const App = styled.div(({ theme }) => ({
     height: '100vh',
     padding: `2vh ${theme.layout.pageMargin}`,
     width: '100vw',
+    minHeight: '100vh',
+    position: 'relative',
     color: theme.colors.faded,
     '.fontLarge': {
       fontSize: theme.fonts.sizes.large
