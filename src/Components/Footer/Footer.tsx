@@ -10,11 +10,9 @@ const Footer = styled.footer(({theme}) => ({
     width: 'fit-content',
     bottom: '0',
     margin: 'auto',
-    marginTop: 'auto',
     right: theme.layout.pageMargin,
     fontSize: theme.fonts.sizes.small,
     '.footer__social': {
-        // background: theme.colors.lively,
         display: 'flex',
         width: '100%',
         marginLeft: 'auto',

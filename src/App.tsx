@@ -9,7 +9,7 @@ import Footer from './Components/Footer/Footer';
 
 const App = styled.div(({ theme }) => ({
     'text-align': 'center',
-    height: '100vh',
+    height: '100%',
     padding: `2vh ${theme.layout.pageMargin}`,
     width: '100vw',
     minHeight: '100vh',

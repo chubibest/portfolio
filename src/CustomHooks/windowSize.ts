@@ -13,5 +13,5 @@ export default function useWindowDimensions() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  return windowDimensions.width < 768 && windowDimensions.width < windowDimensions.height;
+  return windowDimensions.width < windowDimensions.height;
 }
