@@ -15,6 +15,9 @@ const App = styled.div(({ theme }) => ({
     minHeight: '100vh',
     position: 'relative',
     color: theme.colors.faded,
+    '@media (orientation: portrait)': {
+      paddingBottom: '33vh'
+    },
     '.fontLarge': {
       fontSize: theme.fonts.sizes.large
     },
