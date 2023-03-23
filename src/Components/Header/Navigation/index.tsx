@@ -1,11 +1,11 @@
-import React, { useContext, useEffect, useState } from 'react';
-import { WindowSize } from '../../../Context/windowSize';
+import React, { useEffect, useState } from 'react';
 import Hamburger from './MobileActions'
 import NavigationContent from './NavigationContent'
 import Modal from '../../Modal'
+import useWindowResize from '../../../CustomHooks/windowSize'
 
 const Index = () => {
-    const isMobile = useContext(WindowSize)
+    const isMobile = useWindowResize()
     const [displayModal, setDisplayModal] = useState(false)
     const [renderHam, setRenderHam] = useState(isMobile)
 
