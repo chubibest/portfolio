@@ -17,7 +17,6 @@ const theme = {
         callToAction: 'bla bla bla',
         main: 'bla bla',
         sizes: {
-            xSmall: '0.8vw',
             small: '1.2vw',
             medium: '2vw',
             large: '5vw'

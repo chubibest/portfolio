@@ -9,9 +9,9 @@ const NavigationContent = styled.div(({theme}) => ({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    fontSize: theme.fonts.sizes.xSmall,
+    fontSize: theme.fonts.sizes.small,
     'a button': {
-        fontSize: theme.fonts.sizes.xSmall,
+        fontSize: theme.fonts.sizes.small,
     },
     '@media (orientation: portrait)': {
         'flexDirection': 'column',

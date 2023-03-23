@@ -7,7 +7,7 @@ import Modal from '../../Modal'
 const Index = () => {
     const isMobile = useContext(WindowSize)
     const [displayModal, setDisplayModal] = useState(false)
-    const [renderHam, setRenderHam] = useState(true)
+    const [renderHam, setRenderHam] = useState(isMobile)
 
     useEffect(() => {
         setDisplayModal(false)
