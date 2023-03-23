@@ -10,7 +10,11 @@ export default function useWindowDimensions() {
     }
 
     window.addEventListener('orientationchange', handleResize);
-    return () => window.removeEventListener('orientationchange', handleResize);
+    window.addEventListener('resize', handleResize);
+    return function () {
+      window.removeEventListener('orientationchange', handleResize);
+      window.removeEventListener('resize', handleResize);
+    }
   }, []);
 
   return windowDimensions.width < windowDimensions.height;
