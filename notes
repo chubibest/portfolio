@@ -3,30 +3,14 @@ increase 'a' horizontally
 
 
 V1
-<<<<<<< Updated upstream
 Pin navigation on Scroll up and remove on scroll down
 Add highlight styles to button
 Thumbnail
 favicon
-<<<<<<< Updated upstream
 Animate modal entry
 Make about reload page
 Nav fonts are not scaling with the page
 I pad break points
 increase footer, set its top margin to a fifth of the page
 landscape to potrait bug
-=======
-space between name and Title and change the color of text around it to white
-prevent scrolling when modal is up
-=======
-Thumbnail
-favicon
-Add highlight styles to button
-Pin navigation on Scroll up and remove on scroll down
-Animate modal entry
-Make about reload page
-landscape to potrait bug
-increase footer, set its top margin to a fifth of the page
-Nav fonts are not scaling with the page
->>>>>>> Stashed changes
->>>>>>> Stashed changes
+
