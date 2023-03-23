@@ -16,7 +16,7 @@ const Button = styled.button(({theme}) => ({
     borderRadius: '.5vh',
     padding: '1.5vh 2vw',
     '@media (orientation: portrait)': {
-        padding: '3vh 8vw',
+        padding: '2vh 8vw',
     }
 }))
 

@@ -35,11 +35,12 @@ export const mobileTheme = ({
     fonts: {
       ...theme.fonts,
       sizes: {
-        small: '5vw',
-        medium: '6vw',
-        large: '10vw'
+        small: '3vw',
+        medium: '4vw',
+        large: '7vw'
       }
     }
 })
 
+// export const mobileTheme = theme
 export default theme
