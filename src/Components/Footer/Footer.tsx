@@ -21,10 +21,17 @@ const Footer = styled.footer(({theme}) => ({
             color: theme.colors.lively
         }
     },
+
     '@media (orientation: portrait)': {
-        fontSize: '3vw',
+        // fontSize: '3vw',
         right: '50%',
-        transform: 'translateX(50%)'
+        fontSize: theme.fonts.sizes.medium,
+        transform: 'translateX(50%)',
+        width: '95%',
+         '.footer__social': {
+            width: '100%',
+            margin: 'auto'
+        }
     },
 }))
 

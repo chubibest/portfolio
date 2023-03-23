@@ -9,6 +9,10 @@ const NavigationContent = styled.div(({theme}) => ({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
+    fontSize: theme.fonts.sizes.xSmall,
+    'a button': {
+        fontSize: theme.fonts.sizes.xSmall,
+    },
     '@media (orientation: portrait)': {
         'flexDirection': 'column',
         'paddingTop': '18vh',
@@ -20,11 +24,11 @@ const NavigationContent = styled.div(({theme}) => ({
         'lineHeight': '3',
         'paddingRight': '1vw',
         'zIndex': 4,
-        fontSize: '18px',
+        // fontSize: '18px',
+        fontSize: theme.fonts.sizes.medium,
         'a button': {
             marginTop: '1vh',
-            fontSize: '20px',
-
+            fontSize: theme.fonts.sizes.medium,
         }
     },
 }))

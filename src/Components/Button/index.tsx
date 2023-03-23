@@ -13,8 +13,11 @@ const Button = styled.button(({theme}) => ({
     cursor: 'pointer',
     border: `1px solid ${theme.button}`,
     width: 'fit-content',
-    padding: '1rem 2rem',
-    borderRadius: '4px',
+    borderRadius: '.5vh',
+    padding: '1.5vh 2vw',
+    '@media (orientation: portrait)': {
+        padding: '3vh 8vw',
+    }
 }))
 
 const Index = ({ text, className, onClick }: ButtonProps) => {
