@@ -16,7 +16,8 @@ const App = styled.div(({ theme }) => ({
     position: 'relative',
     color: theme.colors.faded,
     '@media (orientation: portrait)': {
-      // paddingBottom: '40vh'
+      height: '100svh',
+      minHeight: '100svh',  
     },
     // media query tab
     // '@media (min-width: 481px) and (max-width: 767px)' {
