@@ -9,8 +9,8 @@ export default function useWindowDimensions() {
       setWindowDimensions({width: window.innerWidth, height: window.innerHeight});
     }
 
-    window.addEventListener('resize', handleResize);
-    // return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener('orientationchange', handleResize);
+    return () => window.removeEventListener('orientationchange', handleResize);
   }, []);
 
   return windowDimensions.width < windowDimensions.height;
