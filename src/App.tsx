@@ -2,10 +2,10 @@ import Header from './Components/Header';
 import styled, { ThemeProvider } from 'styled-components';
 import Intro from './Components/Intro';
 import ContentWrapper from './Components/ContentWrapper';
-import useWindowDimensions from './CustomHooks/windowSize'
 import { WindowSize } from './Context/windowSize';
 import theme, { mobileTheme } from './theme'
 import Footer from './Components/Footer/Footer';
+import useWindowResize from './CustomHooks/windowSize'
 
 const App = styled.div(({ theme }) => ({
     'text-align': 'center',
@@ -39,8 +39,13 @@ const App = styled.div(({ theme }) => ({
 }))
 
 function Index() {
-  const isMobile = useWindowDimensions()
+  // const [isMobile, setIsMobile] = useState(window.innerWidth < window.innerHeight)
 
+  // useEffect(() => {
+  //   setIsMobile(window.innerWidth < window.innerHeight)
+  // });
+
+  const isMobile = useWindowResize()
   return (
     <WindowSize.Provider value={isMobile}>
         <ThemeProvider theme={isMobile ? mobileTheme : theme} >
