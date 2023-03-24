@@ -2,9 +2,15 @@ import React, { Dispatch, SetStateAction } from 'react';
 import styled from 'styled-components';
 
 const Hamburger = styled.div({
+    position: 'absolute',
+    right: '2vw',
     cursor: 'pointer',
     width: '15vw',
-    zIndex: 4,
+    zIndex: 5,
+    display: 'none',
+    '@media (orientation: portrait)': {
+        display: 'unset'
+    }
 })
 
 interface Props {

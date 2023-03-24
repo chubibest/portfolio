@@ -4,7 +4,7 @@ import { mailTo, about } from '../actions';
 import NavigationItem from '../NavigationItem'
 import Button from '../../../Button'
 
-const NavigationContent = styled.div(({theme}) => ({
+const NavigationContent = styled.div<{ displayNav: boolean }>(({theme, displayNav}) => ({
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -14,10 +14,14 @@ const NavigationContent = styled.div(({theme}) => ({
         fontSize: theme.fonts.sizes.small,
     },
     '@media (orientation: portrait)': {
+        display: displayNav ? 'flex' : 'none',
+        'height': '100vh',
+        width: 'fit-content',
+        'position': 'absolute',
+        'top': 0,
         'flexDirection': 'column',
         'paddingTop': '18vh',
         'justifyContent': 'flex-start',
-        'position': 'relative',
         'right': 0,
         background: '#0e0e0e',
         'margin-left': 'auto',
@@ -32,13 +36,15 @@ const NavigationContent = styled.div(({theme}) => ({
         }
     },
 }))
+interface Props  {
+    displayNav?: boolean
+}
 
 // const options  = ['About', 'Experience', 'Contributions', 'Contact']
 const options  = [{text: 'About', onClick: about}, {text: 'Contact', onClick: mailTo}]
-
-const Index = () => {
+const Index = ({ displayNav = true }: Props) => {
     return (
-        <NavigationContent onClick={(e) => {e.stopPropagation()}}>
+        <NavigationContent displayNav={displayNav} onClick={(e) => {e.stopPropagation()}}>
         {
             options.map(({text, onClick}, index) => {
                 return (

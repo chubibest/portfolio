@@ -5,28 +5,24 @@ import Modal from '../../Modal'
 import useWindowResize from '../../../CustomHooks/windowSize'
 
 const Index = () => {
-    const isMobile = useWindowResize()
+
     const [displayModal, setDisplayModal] = useState(false)
-    const [renderHam, setRenderHam] = useState(isMobile)
+    const [displayHam, setDisplayHam] = useState(true)
 
     useEffect(() => {
-        setDisplayModal(false)
-        setRenderHam(true)
-
-    }, [isMobile])
-
-    useEffect(() => {
-        setRenderHam(true)
         if (displayModal){
             document.body.style.overflow = 'hidden'
         } else {
             document.body.style.overflow = 'unset'
+            setDisplayHam(true)
         }
     }, [displayModal])
+
     return (
         <>
-            {isMobile && displayModal ? <Modal setDisplayModal={setDisplayModal} setRenderHam={setRenderHam } > <NavigationContent />  </Modal>: null}
-            {isMobile && renderHam ? <Hamburger displayModal={displayModal} setDisplayModal={setDisplayModal}/> : <NavigationContent />}
+            {displayModal ? <Modal setDisplayModal={setDisplayModal} setDisplayHam={setDisplayHam}/> : null}
+            {displayHam ? <Hamburger displayModal={displayModal} setDisplayModal={setDisplayModal}/> : null}
+            <NavigationContent displayNav={displayModal} />
         </>
     );
 };
