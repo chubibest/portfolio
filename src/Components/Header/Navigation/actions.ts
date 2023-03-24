@@ -5,4 +5,5 @@ export const mailTo = (e:  React.MouseEvent<HTMLElement>) => {
 
 export const about = (e: React.MouseEvent<HTMLElement>) => {
     e.preventDefault();
+    window.location.reload()
 }

@@ -18,7 +18,13 @@ const Footer = styled.footer(({theme}) => ({
         marginLeft: 'auto',
         justifyContent: 'space-around',
         'a': {
-            color: theme.colors.lively
+            color: theme.colors.lively,
+        },
+        '.footer__social-item': {
+            'transition': 'all .4s ease-in-out',
+            '&:active, &:hover': {
+                transform: 'scale(1.5)'
+            }
         }
     },
 
