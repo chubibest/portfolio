@@ -2,9 +2,8 @@ import Header from './Components/Header';
 import styled, { ThemeProvider } from 'styled-components';
 import Intro from './Components/Intro';
 import ContentWrapper from './Components/ContentWrapper';
-import theme, { mobileTheme } from './theme'
+import theme from './theme'
 import Footer from './Components/Footer/Footer';
-import useWindowResize from './CustomHooks/windowSize'
 
 const App = styled.div(({ theme }) => ({
     'text-align': 'center',
@@ -18,18 +17,23 @@ const App = styled.div(({ theme }) => ({
       height: '100svh',
       minHeight: '100svh',  
     },
-    // media query tab
-    // '@media (min-width: 481px) and (max-width: 767px)' {
-    //   paddingBottome
-    // },
     '.fontLarge': {
-      fontSize: theme.fonts.sizes.large
+      fontSize: theme.fonts.sizes.large,
+      '@media (orientation: portrait)': {
+        fontSize: theme.fonts.sizes.mobile.large,
+      }
     },
     '.fontSmall': {
-      fontSize: theme.fonts.sizes.small
+      fontSize: theme.fonts.sizes.small,
+      '@media (orientation: portrait)': {
+        fontSize: theme.fonts.sizes.mobile.small,
+      }
     },
     '.fontMedium': {
-      fontSize: theme.fonts.sizes.medium
+      fontSize: theme.fonts.sizes.medium,
+      '@media (orientation: portrait)': {
+       fontSize: theme.fonts.sizes.mobile.medium,
+      }
     },
     '.btn-margin-top': {
       marginTop: theme.layout.marginBn
@@ -37,16 +41,14 @@ const App = styled.div(({ theme }) => ({
 }))
 
 function Index() {
-  const isMobile = useWindowResize()
   return (
 
-    <ThemeProvider theme={isMobile ? mobileTheme : theme} >
+    <ThemeProvider theme={theme} >
       <App className="App">
             <Header />
             <ContentWrapper>
               <>
                 <Intro />
-                {/* <Experience /> */}
               </>
             </ ContentWrapper>
             <Footer />

@@ -25,10 +25,10 @@ const NavigationContent = styled.div(({theme}) => ({
         'paddingRight': '1vw',
         'zIndex': 4,
         // fontSize: '18px',
-        fontSize: theme.fonts.sizes.medium,
+        fontSize: theme.fonts.sizes.mobile.medium,
         'a button': {
             marginTop: '1vh',
-            fontSize: theme.fonts.sizes.medium,
+            fontSize: theme.fonts.sizes.mobile.medium,
         }
     },
 }))

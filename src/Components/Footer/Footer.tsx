@@ -24,7 +24,7 @@ const Footer = styled.footer(({theme}) => ({
 
     '@media (orientation: portrait)': {
         right: '50%',
-        fontSize: theme.fonts.sizes.small,
+        fontSize: theme.fonts.sizes.mobile.small,
         transform: 'translateX(50%)',
         width: '95%',
          '.footer__social': {
