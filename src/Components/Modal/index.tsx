@@ -3,29 +3,27 @@ import styled from 'styled-components';
 const Modal = styled.div({
     width: '100vw',
     height: '100vh',
-    display: 'flex',
+    display: 'none',
     background: 'rgb(0, 0, 0, 0.6)',
     'backdrop-filter': 'blur(5px)',
     position: 'absolute',
-    // position: 'fixed',
     top: 0,
     left: 0,
-    'overflow': 'clip',
-    'zIndex': 3
+    'zIndex': 3,
+    '@media (orientation: portrait)': {
+        display: 'flex'
+    }
 })
-
-interface Props extends React.PropsWithChildren {
+interface Props {
     setDisplayModal:  React.Dispatch<React.SetStateAction<boolean>>
-    setRenderHam: React.Dispatch<React.SetStateAction<boolean>>
+    setDisplayHam:  React.Dispatch<React.SetStateAction<boolean>>
 }
 
-const Index = ({setRenderHam, children, setDisplayModal }: Props) => {
+const Index = ({setDisplayModal, setDisplayHam}: Props) => {
     return (
         <Modal
-            onClick={(e) => { setDisplayModal(false); setRenderHam(false);}}
-            >
-            
-        {children}
+            onClick={(e) => { setDisplayHam(false); setDisplayModal(false)}}
+        >
         </Modal>
     );
 };
