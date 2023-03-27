@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { mailTo, about } from '../actions';
 import NavigationItem from '../NavigationItem'
 import Button from '../../../Button'
+import useInitialRender from '../../../../CustomHooks/useInitialRender';
 
 const NavigationContent = styled.div<{ displayNav: boolean; fadeOut?: boolean }>(({theme, displayNav, fadeOut}) => {
 
@@ -54,18 +55,16 @@ interface Props  {
 const options  = [{text: 'About', onClick: about}, {text: 'Contact', onClick: mailTo}]
 const Index = ({ displayNav = true }: Props) => {
     const [fadeOut, setFadeOut] = useState(false)
-    const [initialRender, setInitialRender] = useState(true)
+    const initialRender = useInitialRender()
 
     useEffect(() => {
-        if(initialRender){
-            setInitialRender(false)
-        } else {
+        if(!initialRender){
             if (!displayNav) {
                 setFadeOut(true)
                 setTimeout((() => setFadeOut(false)), 500)
             } 
         }
-    }, [displayNav])
+    }, [displayNav, initialRender])
 
     return (
         <NavigationContent displayNav={displayNav} fadeOut={fadeOut} onClick={(e) => {e.stopPropagation()}}>
