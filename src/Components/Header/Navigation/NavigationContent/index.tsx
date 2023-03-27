@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { mailTo, about } from '../actions';
 import NavigationItem from '../NavigationItem'
 import Button from '../../../Button'
 
-const NavigationContent = styled.div<{ displayNav: boolean }>(({theme, displayNav}) => ({
+const NavigationContent = styled.div<{ displayNav: boolean; fadeOut?: boolean }>(({theme, displayNav, fadeOut}) => {
+
+return {
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -14,7 +16,7 @@ const NavigationContent = styled.div<{ displayNav: boolean }>(({theme, displayNa
         fontSize: theme.fonts.sizes.small,
     },
     '@media (orientation: portrait)': {
-        display: displayNav ? 'flex' : 'none',
+        display: displayNav || fadeOut ? 'flex' : 'none',
         'height': '100vh',
         width: 'fit-content',
         'position': 'absolute',
@@ -28,14 +30,22 @@ const NavigationContent = styled.div<{ displayNav: boolean }>(({theme, displayNa
         'lineHeight': '3',
         'paddingRight': '1vw',
         'zIndex': 4,
-        // fontSize: '18px',
+        animation: `${fadeOut ? 'slideOut' : 'slideIn' } .5s 1`,
+        '@keyframes slideIn': {
+            '0%': {right: '-30vw'},
+            '100%': {right: 0}
+        },
+        '@keyframes slideOut': {
+            '0%': {right: '0'},
+            '100%': {right: '-35vw'}
+        },
         fontSize: theme.fonts.sizes.mobile.medium,
         'a button': {
             marginTop: '1vh',
             fontSize: theme.fonts.sizes.mobile.medium,
         }
-    },
-}))
+    }}
+})
 interface Props  {
     displayNav?: boolean
 }
@@ -43,8 +53,22 @@ interface Props  {
 // const options  = ['About', 'Experience', 'Contributions', 'Contact']
 const options  = [{text: 'About', onClick: about}, {text: 'Contact', onClick: mailTo}]
 const Index = ({ displayNav = true }: Props) => {
+    const [fadeOut, setFadeOut] = useState(false)
+    const [initialRender, setInitialRender] = useState(true)
+
+    useEffect(() => {
+        if(initialRender){
+            setInitialRender(false)
+        } else {
+            if (!displayNav) {
+                setFadeOut(true)
+                setTimeout((() => setFadeOut(false)), 500)
+            } 
+        }
+    }, [displayNav])
+
     return (
-        <NavigationContent displayNav={displayNav} onClick={(e) => {e.stopPropagation()}}>
+        <NavigationContent displayNav={displayNav} fadeOut={fadeOut} onClick={(e) => {e.stopPropagation()}}>
         {
             options.map(({text, onClick}, index) => {
                 return (
