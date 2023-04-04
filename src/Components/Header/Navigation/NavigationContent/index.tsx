@@ -76,7 +76,7 @@ const Index = ({ displayNav = true }: Props) => {
             })
         }
         <NavigationItem>
-            <a href={require('../../../../resume.pdf')} download="Resume" target='_blank' rel="noreferrer">
+            <a href={require('../../../../resume.docx')} download="Resume" target='_blank' rel="noreferrer">
                 <Button text='Resume'/>
             </a>
         </NavigationItem>
