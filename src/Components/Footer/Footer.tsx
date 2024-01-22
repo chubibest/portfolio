@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faLinkedinIn, faMediumM, faStackOverflow, faCodepen, faNeos } from '@fortawesome/free-brands-svg-icons';
-import { faCode, faTree } from '@fortawesome/free-solid-svg-icons';
+import { faGithub, faLinkedinIn, faMediumM, faStackOverflow, faNeos } from '@fortawesome/free-brands-svg-icons';
+import { faTree } from '@fortawesome/free-solid-svg-icons';
 
 import styled from 'styled-components';
 
