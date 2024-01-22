@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faLinkedinIn, faMediumM, faStackOverflow, faCodepen } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faLinkedinIn, faMediumM, faStackOverflow, faCodepen, faNeos } from '@fortawesome/free-brands-svg-icons';
 import { faCode, faTree } from '@fortawesome/free-solid-svg-icons';
 
 import styled from 'styled-components';
@@ -63,24 +63,29 @@ const Index = () => (
                     <FontAwesomeIcon icon={faStackOverflow} />
                 </a>
             </div>
-            <div className="footer__social-item">
+            {/* <div className="footer__social-item">
                 <a target="_blank" rel="noopener noreferrer" href="https://codepen.io/chubibest" className="footer__social-link">
                     <FontAwesomeIcon icon={faCodepen} />
                 </a>
-            </div>
-            <div className="footer__social-item">
+            </div> */}
+            {/* <div className="footer__social-item">
                 <a target="_blank" rel="noopener noreferrer" href="https://leetcode.com/chubibest" className="footer__social-link">
                     <FontAwesomeIcon icon={faCode} />
                 </a>
-            </div>
+            </div> */}
             <div className="footer__social-item">
                 <a target="_blank" rel="noopener noreferrer" href="https://tree-visualizer.com" className="footer__social-link">
                     <FontAwesomeIcon icon={faTree} />
                 </a>
             </div>
+            <div className="footer__social-item">
+                <a target="_blank" rel="noopener noreferrer" href="https://chubibest.github.io/good-news/" className="footer__social-link">
+                    <FontAwesomeIcon icon={faNeos} />
+                </a>
+            </div>
         </div>
         <div className="footer__copyright">
-            <p>© 2023 Designed and Developed by <strong>Chubi Best</strong>.</p>
+            <p>Designed and Developed by <strong>Chubi Best</strong>.</p>
         </div>
     </Footer>
 );
